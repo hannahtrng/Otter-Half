@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class StartButtonScript : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,11 +12,12 @@ public class StartButtonScript : MonoBehaviour
     }
 
 
+
     public void OnClick()
     {
         Debug.Log("no");
+        SceneManager.LoadScene("Main Scene");
     }
-
 
 
     // Update is called once per frame
