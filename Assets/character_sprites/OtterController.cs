@@ -37,8 +37,14 @@ public class OtterController : MonoBehaviour
         // Block input during turn animation
         if (isTurning) return;
 
-        // Handle movement input
-        if (Input.GetKey(KeyCode.A)) // Swim left
+        // Handle movement input specifically for the otter
+        HandleOtterMovement();
+    }
+
+    private void HandleOtterMovement()
+    {
+        // Swim left
+        if (Input.GetKey(KeyCode.A))
         {
             if (!isSwimmingLeft && !isTurning) // Trigger turn animation only if switching from right
             {
@@ -49,7 +55,8 @@ public class OtterController : MonoBehaviour
                 StartSwimming(true);
             }
         }
-        else if (Input.GetKey(KeyCode.D)) // Swim right
+        // Swim right
+        else if (Input.GetKey(KeyCode.D))
         {
             if (isSwimmingLeft && !isTurning) // Trigger turn animation only if switching from left
             {
@@ -60,7 +67,8 @@ public class OtterController : MonoBehaviour
                 StartSwimming(false);
             }
         }
-        else // Go idle when no keys are pressed
+        // Go idle when no keys are pressed
+        else
         {
             if (!isTurning && animator.GetBool("isSwimming")) // Stop swimming when not turning
             {
