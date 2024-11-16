@@ -110,37 +110,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: otter_sprites_2_0
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 41
-        width: 47
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 16cec7770dbbba04ea17af3ade7a95d9
-      internalID: -1397797594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: otter_sprites_2_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 32
-        width: 41
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 35
+        y: 22
+        width: 62
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 2, z: 1, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -155,13 +134,13 @@ TextureImporter:
       name: otter_sprites_2_2
       rect:
         serializedVersion: 2
-        x: 225
-        y: 31
-        width: 37
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 123
+        y: 22
+        width: 62
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 2, z: 0, w: 10}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -173,22 +152,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: otter_sprites_2_3
+      name: otter_sprites_2_4
       rect:
         serializedVersion: 2
-        x: 306
-        y: 39
-        width: 47
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 215
+        y: 22
+        width: 62
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 2, z: 0, w: 10}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e70275335fe60b14e92c117424d17ab1
-      internalID: 677643671
+      spriteID: bd24f1c5c47ba4fff902ef3b4e1c0e40
+      internalID: 1580869740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: otter_sprites_2_5
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 21
+        width: 62
+        height: 64
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 3, y: 2, z: 0, w: 9}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 073a268e6f28841f98aa04ab0d57eab3
+      internalID: 993869579
       vertices: []
       indices: 
       edges: []
@@ -208,6 +208,8 @@ TextureImporter:
       otter_sprites_2_1: -851826107
       otter_sprites_2_2: 1512991613
       otter_sprites_2_3: 677643671
+      otter_sprites_2_4: 1580869740
+      otter_sprites_2_5: 993869579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
