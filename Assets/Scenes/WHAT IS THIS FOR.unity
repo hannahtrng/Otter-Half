@@ -331,6 +331,10 @@ PrefabInstance:
       value: Shark
       objectReference: {fileID: 0}
     - target: {fileID: 3894715665353866047, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894715665353866047, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -618,11 +622,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4662749557757334417, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.36
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4662749557757334417, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4662749557757334417, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_LocalPosition.z

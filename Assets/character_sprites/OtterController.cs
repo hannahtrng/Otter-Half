@@ -94,7 +94,7 @@ public class OtterController : MonoBehaviour
         spriteRenderer.flipX = turnLeft;
 
         // Finish the turn after the turn animation duration
-        float turnDuration = 0.5f; // Adjust based on the length of your turn animation
+        float turnDuration = 0.5f; // Adjust based on the length of turn animation
         Invoke("FinishTurn", turnDuration);
     }
 
