@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Fighting Scene.unity
     guid: c3e3e0b9b430b0a458be6d6269a4564e
   - enabled: 1
-    path: Assets/Scenes/WHAT IS THIS FOR.unity
+    path: Assets/Scenes/Cave.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Introduction Scene.unity

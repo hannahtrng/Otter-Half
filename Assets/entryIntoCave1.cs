@@ -22,6 +22,6 @@ public class entryIntoCave1 : MonoBehaviour
 
     private void ChangeScene()
     {
-        SceneManager.LoadScene("Testing Scene for Shark Detection");
+        SceneManager.LoadScene("Cave");
     }
 }
