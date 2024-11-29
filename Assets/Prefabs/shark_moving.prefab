@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1731647225502125349}
   - component: {fileID: 6256895006111107471}
   - component: {fileID: 6063133911000537839}
+  - component: {fileID: 8126742344721230426}
   m_Layer: 0
   m_Name: shark_moving
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 482293287, guid: 381354808ec68a84ab874f4858638874, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c50b458c2724646199c21b18ef666e41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.37, y: 0.2}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.37, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,3 +147,24 @@ MonoBehaviour:
   moveSpeed: 2
   moveDistanceHoriz: 3
   moveDistanceVert: 0
+--- !u!95 &8126742344721230426
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137196694289141195}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 599eaad5f2d5c4300976473777fc7c1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
