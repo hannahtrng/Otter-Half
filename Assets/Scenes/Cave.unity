@@ -626,7 +626,7 @@ RectTransform:
   m_Father: {fileID: 136311010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -783,12 +783,12 @@ GameObject:
   - component: {fileID: 860894448}
   - component: {fileID: 860894447}
   m_Layer: 5
-  m_Name: Pop Up Panel
+  m_Name: Settings Pop Up Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860894446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -958,11 +958,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0cf0ac10b0471044b5feceafd9c1f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsPanel: {fileID: 0}
-  openSettingsButton: {fileID: 0}
-  quitButton: {fileID: 0}
-  restartButton: {fileID: 0}
-  volumeSlider: {fileID: 0}
+  settingsPanel: {fileID: 860894445}
+  openSettingsButton: {fileID: 238470424}
+  quitButton: {fileID: 2056683096}
+  restartButton: {fileID: 1988039811}
+  volumeSlider: {fileID: 2110791697}
   Back: {fileID: 0}
   open: 0
 --- !u!4 &1032185116
@@ -68107,7 +68107,7 @@ RectTransform:
   m_Father: {fileID: 1640336685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
