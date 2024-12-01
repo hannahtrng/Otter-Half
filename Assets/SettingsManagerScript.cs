@@ -9,13 +9,18 @@ public class SettingsManager : MonoBehaviour
     public Button quitButton;      // Button to change to another scene
     public Button restartButton;          // Button to restart the game
     public Slider volumeSlider;           // Slider for adjusting the volume
+    public Button Back;
     public bool open;
+    private const string SharkTriggerKey = "SharkTriggered";
     private void Start()
     {
         // Make sure the settings panel is initially inactive
         settingsPanel.SetActive(false);
         open = false;
-
+        if (Back != null)
+        {
+            Back.onClick.AddListener(Won);
+        }
         // Add listeners to buttons
         openSettingsButton.onClick.AddListener(OpenSettingsPanel);
         if (quitButton != null)
@@ -64,8 +69,18 @@ public class SettingsManager : MonoBehaviour
     // Restart the current scene
     private void RestartGame()
     {
+        SharkMovement.ResetAllSharkTriggers();
+
         // Reload the current scene
         SceneManager.LoadScene("Start Screen");
+        
+
+
+    }
+
+    private void Won()
+    {
+        SceneManager.LoadScene("Cave");
     }
 
     // Adjust the volume and save it
