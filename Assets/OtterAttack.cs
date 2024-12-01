@@ -12,8 +12,14 @@ public class OtterAttack : MonoBehaviour
     public float knockbackDuration = 0.1f; // Duration of knockback
     public KeyCode attackKey = KeyCode.Space;
     public LayerMask sharkLayer;
+    private Animator animator;
 
     private bool facingRight = true;
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -48,6 +54,7 @@ public class OtterAttack : MonoBehaviour
 
     void Attack()
     {
+        animator.SetTrigger("attack");
         Vector2 attackPosition = CalculateAttackPosition();
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPosition, attackRange, sharkLayer);
 
