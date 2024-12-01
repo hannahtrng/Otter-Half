@@ -23,7 +23,7 @@ public class OtterAttack : MonoBehaviour
 
     void Update()
     {
-        UpdateFacingDirection();
+       // UpdateFacingDirection();
 
         if (Input.GetKeyDown(attackKey))
         {
@@ -31,19 +31,19 @@ public class OtterAttack : MonoBehaviour
         }
     }
 
-    void UpdateFacingDirection()
-    {
-        if (Input.GetKey(KeyCode.A))
-        {
-            facingRight = false;
-            FlipSprite(-1);
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            facingRight = true;
-            FlipSprite(1);
-        }
-    }
+    // void UpdateFacingDirection()
+    // {
+    //     if (Input.GetKey(KeyCode.A))
+    //     {
+    //         facingRight = false;
+    //         FlipSprite(-1);
+    //     }
+    //     else if (Input.GetKey(KeyCode.D))
+    //     {
+    //         facingRight = true;
+    //         FlipSprite(1);
+    //     }
+    // }
 
     void FlipSprite(int direction)
     {
