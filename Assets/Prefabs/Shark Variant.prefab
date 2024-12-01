@@ -32,10 +32,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shark Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 3666544166115517549, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 3894715665353866047, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_Size.x
       value: 2.9240932
