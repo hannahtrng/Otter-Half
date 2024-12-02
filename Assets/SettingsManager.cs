@@ -12,9 +12,23 @@ public class SettingsManager : MonoBehaviour
     public Button Back;
     public bool open;
     private const string SharkTriggerKey = "SharkTriggered";
+    public GameObject otter;
+    public GameObject shark;
+
     private void Start()
     {
         // Make sure the settings panel is initially inactive
+   
+            if (SceneManager.GetActiveScene().name == "Cave")
+            {
+                    otter = GameObject.FindWithTag("Player");
+                    if (otter != null)
+                    {
+                        otter.GetComponent<OtterPositionManager>().ResetPosition();
+                    }
+         
+            }   
+
         settingsPanel.SetActive(false);
         open = false;
         if (Back != null)
@@ -63,14 +77,19 @@ public class SettingsManager : MonoBehaviour
     // Change to a specific scene (e.g., "MainMenu")
     private void ChangeScene()
     {
+        SharkMovement.ResetAllSharkTriggers();
         SceneManager.LoadScene("Game Over (Lose)");  // Replace "MainMenu" with your desired scene name
     }
 
     // Restart the current scene
     private void RestartGame()
     {
+        otter = GameObject.FindWithTag("Player");
+        if (otter != null)
+        {
+            otter.GetComponent<OtterPositionManager>().ResetPosition();
+        }
         SharkMovement.ResetAllSharkTriggers();
-
         // Reload the current scene
         SceneManager.LoadScene("Start Screen");
 

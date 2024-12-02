@@ -10,9 +10,11 @@ public class OtterHealth : MonoBehaviour
     public int maxHealth = 100;
     public Slider healthBar; // Assign the Otter's health bar in the Inspector
     public GameObject otter;
+
     void Start()
     {
         UpdateHealthBar();
+        otter = GameObject.FindWithTag("Player");
     }
 
     public void TakeDamage(int damage)
@@ -43,11 +45,6 @@ public class OtterHealth : MonoBehaviour
         }
         // Stop all movements
         StopAllMovements();
-
-        if (otter != null)
-        {
-            otter.GetComponent<OtterPositionManager>().ResetPosition();
-        }
         // Return to the title screen
         SceneManager.LoadScene("Game Over (Lose)"); // Replace "TitleScreen" with the actual name of your title scene
     }

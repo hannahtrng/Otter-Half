@@ -9,6 +9,16 @@ public class SharkHealth : MonoBehaviour
     public int health = 100;
     public int maxHealth = 100;
     public Slider healthBar; // Assign the Shark's health bar in the Inspector
+    private bool hasWonSharkFight = false;
+
+    public bool HasWonSharkFight
+    {
+        get { return hasWonSharkFight; }
+    }
+    public void SetSharkFightVictory(bool victoryStatus)
+    {
+        hasWonSharkFight = victoryStatus;
+    }
 
     void Start()
     {
@@ -43,6 +53,7 @@ public class SharkHealth : MonoBehaviour
         {
             SFXmanager.Instance.DeathSound.Play();
         }
+        SetSharkFightVictory(true);
         // Stop all movements for both Shark and Otter
         StopAllMovements();
 

@@ -11,7 +11,7 @@ public class GameOverManager : MonoBehaviour
         {
             otter.GetComponent<OtterPositionManager>().ResetPosition();
         }
-
+        SharkMovement.ResetAllSharkTriggers();
         SceneManager.LoadScene("Start Screen"); // Replace with your game scene name
     }
 
@@ -29,6 +29,7 @@ public class GameOverManager : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quitting game...");
-        Application.Quit(); // Only works in a built application
+        SceneManager.LoadScene("Game Over (Lose)"); // Replace with your game scene name
     }
+
 }

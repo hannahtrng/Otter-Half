@@ -68778,6 +68778,8 @@ MonoBehaviour:
   volumeSlider: {fileID: 572481952}
   Back: {fileID: 0}
   open: 0
+  otter: {fileID: 0}
+  shark: {fileID: 0}
 --- !u!4 &2072877578
 Transform:
   m_ObjectHideFlags: 0

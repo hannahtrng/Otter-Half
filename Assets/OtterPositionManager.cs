@@ -1,5 +1,5 @@
-
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OtterPositionManager : MonoBehaviour
 {
@@ -31,14 +31,21 @@ public class OtterPositionManager : MonoBehaviour
 
     public void ResetPosition()
     {
-        // Clear saved position
-        PlayerPrefs.DeleteKey("OtterPosition_X");
-        PlayerPrefs.DeleteKey("OtterPosition_Y");
-        PlayerPrefs.DeleteKey("OtterPosition_Z");
-        PlayerPrefs.Save();
+        if (PlayerPrefs.HasKey(OtterPositionKey + "_X"))
+        {
+            PlayerPrefs.DeleteKey("OtterPosition_X");
+            PlayerPrefs.DeleteKey("OtterPosition_Y");
+            PlayerPrefs.DeleteKey("OtterPosition_Z");
+            PlayerPrefs.Save();
 
-        // Reset otter's position to (0, 0, 0)
-        transform.position = Vector3.zero;
-        Debug.Log("Otter position reset to origin.");
+            // Reset otter's position to (0, 0, 0)
+            transform.position = new Vector3(0, 0, 0);
+            Debug.Log("Otter position reset to origin.");
+        }
+        else
+        {
+
+            Debug.Log("No saved position found for the otter.");
+        }
     }
 }
