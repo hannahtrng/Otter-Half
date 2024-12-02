@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Otter
+  - OtterHalf
+  - Shark
   layers:
   - Default
   - TransparentFX
