@@ -63,7 +63,7 @@ public class SettingsManager : MonoBehaviour
     // Change to a specific scene (e.g., "MainMenu")
     private void ChangeScene()
     {
-        SceneManager.LoadScene("End Scene");  // Replace "MainMenu" with your desired scene name
+        SceneManager.LoadScene("Game Over (Lose)");  // Replace "MainMenu" with your desired scene name
     }
 
     // Restart the current scene
