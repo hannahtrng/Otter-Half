@@ -7048,8 +7048,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   attackRange: 0.6
-  horizontalOffset: 3
-  verticalOffset: -1.3
+  horizontalOffset: 2
+  verticalOffset: 0
   knockbackDistance: 1
   knockbackDuration: 0.1
   attackKey: 32
