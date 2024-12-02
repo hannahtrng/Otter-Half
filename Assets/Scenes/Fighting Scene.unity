@@ -6989,7 +6989,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9050640e5bb6f074fbe0ef6a53897a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 10
+  attackDamage: 20
   attackRange: 0.6
   horizontalOffset: 3
   verticalOffset: -1.3
