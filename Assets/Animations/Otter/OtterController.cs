@@ -17,7 +17,7 @@ public class OtterController : MonoBehaviour
         {
             animator.SetBool("isSwimming", false);
             animator.SetBool("isSwimmingLeft", isSwimmingLeft);
-            animator.SetBool("isTurning", false);
+            // animator.SetBool("isTurning", false);
         }
         else
         {
@@ -81,25 +81,27 @@ public class OtterController : MonoBehaviour
     {
         if (isSwimmingLeft == turnLeft) return; // Skip if already facing the correct direction
 
-        isTurning = true; // Mark as turning
+        // isTurning = true; // Mark as turning
         isSwimmingLeft = turnLeft;
 
         // Update Animator parameters
         animator.SetBool("isSwimmingLeft", isSwimmingLeft);
-        animator.SetBool("isTurning", true);
+        animator.SetTrigger("turn");
 
         Debug.Log("Turning to " + (turnLeft ? "left" : "right"));
 
         // Use turn animation
-        spriteRenderer.flipX = turnLeft;
+        // spriteRenderer.flipX = turnLeft;
+        // moved to OnOtterTurn
 
         // Finish the turn after the turn animation duration
-        float turnDuration = 0.5f; // Adjust based on the length of turn animation
-        Invoke("FinishTurn", turnDuration);
+        // float turnDuration = 0.5f; // Adjust based on the length of turn animation
+       // Invoke("FinishTurn", turnDuration);
     }
 
     private void FinishTurn()
     {
+        // no longer being used, changed parameter to trigger "turn"
         isTurning = false; // Mark turn as finished
         animator.SetBool("isTurning", false);
 
@@ -122,4 +124,11 @@ public class OtterController : MonoBehaviour
         animator.SetBool("isSwimming", false);
         Debug.Log("Idle");
     }
+
+    public void OnOtterTurn()
+    {
+        // Use turn animation
+        spriteRenderer.flipX = isSwimmingLeft;
+    }
 }
+

@@ -20,20 +20,20 @@ AnimationClip:
   m_PPtrCurves:
   - serializedVersion: 2
     curve:
-    - time: 0.46666667
+    - time: 0.15555556
       value: {fileID: -851826107, guid: 54eab4de7268b414fbe2b34a1b6c7027, type: 3}
-    - time: 0.78333336
+    - time: 0.2611111
       value: {fileID: 1512991613, guid: 54eab4de7268b414fbe2b34a1b6c7027, type: 3}
-    - time: 1.0833334
+    - time: 0.3611111
       value: {fileID: 1580869740, guid: 54eab4de7268b414fbe2b34a1b6c7027, type: 3}
-    - time: 1.3333334
+    - time: 0.44444445
       value: {fileID: 993869579, guid: 54eab4de7268b414fbe2b34a1b6c7027, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 180
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -59,7 +59,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.35
+    m_StopTime: 0.45000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,4 +78,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.44444445
+    functionName: OnOtterTurn
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
