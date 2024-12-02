@@ -9,9 +9,14 @@ public class GameOverManager : MonoBehaviour
         SceneManager.LoadScene("Start Screen"); // Replace with your game scene name
     }
 
+    public void Game()
+    {
+        SceneManager.LoadScene("Cave"); // Replace with your game scene name
+    }
+
     public void Credits()
     {
-        SceneManager.LoadScene("Credits"); // Replace with your game scene name
+        SceneManager.LoadScene("Credits "); // Replace with your game scene name
     }
 
     // Quit the game
