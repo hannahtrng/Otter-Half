@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Collections.Generic;   
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,11 +18,13 @@ public class SharkMovement : MonoBehaviour
 
     // Key prefix for PlayerPrefs to track whether the shark has triggered
     private const string SharkTriggerKeyPrefix = "SharkTriggered_";
+    private const string OtterPositionKey = "OtterPosition";
 
     static Dictionary<string, bool> sharkTriggeredMap = new();
 
     // Unique identifier for this shark (you can use the shark's name or any unique value)
     private string sharkID;
+    private GameObject Otter;
 
     // Start is called before the first frame update
     void Start()
@@ -34,9 +36,12 @@ public class SharkMovement : MonoBehaviour
         sharkID = gameObject.name;  // Using the shark's name as the unique identifier, change this if needed.
         sharkTriggeredMap.TryAdd(sharkID, false);
     }
-
-    // Update is called once per frame
-    void Update()
+    void Awake()
+    {
+        Otter = GameObject.FindWithTag("Player");
+    }
+        // Update is called once per frame
+        void Update()   
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
 
@@ -89,8 +94,27 @@ public class SharkMovement : MonoBehaviour
         }
     }
 
+    private void SaveOtterPosition()
+    {
+        if (Otter != null)
+        {
+            Debug.Log($"Otter reference found: {Otter.name}");
+            Vector3 otterPosition = Otter.transform.position;
+            PlayerPrefs.SetFloat(OtterPositionKey + "_X", otterPosition.x);
+            PlayerPrefs.SetFloat(OtterPositionKey + "_Y", otterPosition.y);
+            PlayerPrefs.SetFloat(OtterPositionKey + "_Z", otterPosition.z);
+            PlayerPrefs.Save();
+            Debug.Log($"Otter position saved: {otterPosition}");
+        }
+        else
+        {
+            Debug.Log("Otter reference is null!");
+        }
+    }
+
     private void ChangeScene()
     {
+        SaveOtterPosition();
         // Change scene (make sure the scene is added to the build settings)
         SceneManager.LoadScene("Fighting Scene");
     }
