@@ -3,9 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour
 {
+    public GameObject otter;
     // Restart the current game
     public void RestartGame()
     {
+        if (otter != null)
+        {
+            otter.GetComponent<OtterPositionManager>().ResetPosition();
+        }
+
         SceneManager.LoadScene("Start Screen"); // Replace with your game scene name
     }
 
