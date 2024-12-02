@@ -16,7 +16,7 @@ public class GameOverManager : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits "); // Replace with your game scene name
+        SceneManager.LoadScene("Credits"); // Replace with your game scene name
     }
 
     // Quit the game
