@@ -13,13 +13,16 @@ public class OtterAttack : MonoBehaviour
     public KeyCode attackKey = KeyCode.Space;
     public LayerMask sharkLayer;
     private Animator animator;
+    private SFXmanager sfxManager; // Reference to the SFXmanager
 
-    private bool facingRight = true;
+
+private bool facingRight = true;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-    }
+        sfxManager = FindObjectOfType<SFXmanager>();
+}
 
     void Update()
     {
@@ -27,23 +30,13 @@ public class OtterAttack : MonoBehaviour
 
         if (Input.GetKeyDown(attackKey))
         {
+           if (SFXmanager.Instance != null && SFXmanager.Instance.FightSound != null)
+            {
+                SFXmanager.Instance.FightSound.Play();
+            }
             Attack();
         }
     }
-
-    // void UpdateFacingDirection()
-    // {
-    //     if (Input.GetKey(KeyCode.A))
-    //     {
-    //         facingRight = false;
-    //         FlipSprite(-1);
-    //     }
-    //     else if (Input.GetKey(KeyCode.D))
-    //     {
-    //         facingRight = true;
-    //         FlipSprite(1);
-    //     }
-    // }
 
     void FlipSprite(int direction)
     {

@@ -12,7 +12,7 @@ public class SharkAttack : MonoBehaviour
     private bool isChargingAttack = false;
 
     private int attackCount = 0;
-    private int attacksBeforeCharge = 3;
+    private int attacksBeforeCharge = 4;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -24,6 +24,10 @@ public class SharkAttack : MonoBehaviour
                 if (otterHealth != null)
                 {
                     otterHealth.TakeDamage(attackDamage);
+                    if (SFXmanager.Instance != null && SFXmanager.Instance.TakeDamageSound != null)
+                    {
+                        SFXmanager.Instance.TakeDamageSound.Play();
+                    }
                     Debug.Log("Shark attacked the player!");
                 }
                 else

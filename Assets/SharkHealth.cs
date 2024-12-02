@@ -1,5 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;   
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI; // Required for UI components
 
@@ -38,7 +39,44 @@ public class SharkHealth : MonoBehaviour
     void Die()
     {
         Debug.Log("Shark has been defeated!");
-        // Handle shark death, e.g., disable it or play an animation
-        //gameObject.SetActive(false);
+        if (SFXmanager.Instance != null && SFXmanager.Instance.FightSound != null)
+        {
+            SFXmanager.Instance.DeathSound.Play();
+        }
+        // Stop all movements for both Shark and Otter
+        StopAllMovements();
+
+        // Return to the Cave scene
+        SceneManager.LoadScene("Cave"); // Replace "Cave" with your scene's actual name
+    }
+
+    void StopAllMovements()
+    {
+
+        // Optionally stop the Shark's Rigidbody
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero; // Stop movement
+            rb.angularVelocity = 0f;   // Stop rotation
+        }
+
+        // Find the Otter and stop its movements
+        GameObject otter = GameObject.FindWithTag("Player"); // Ensure the Otter has the "Otter" tag
+        if (otter != null)
+        {
+            foreach (MonoBehaviour script in otter.GetComponents<MonoBehaviour>())
+            {
+                script.enabled = false; // Disable all scripts on the Otter
+            }
+
+            Rigidbody2D otterRb = otter.GetComponent<Rigidbody2D>();
+            if (otterRb != null)
+            {
+                otterRb.velocity = Vector2.zero; // Stop Otter movement
+                otterRb.angularVelocity = 0f;   // Stop Otter rotation
+            }
+        }
     }
 }
+

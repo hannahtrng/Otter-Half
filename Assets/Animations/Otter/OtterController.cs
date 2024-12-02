@@ -89,6 +89,10 @@ public class OtterController : MonoBehaviour
         animator.SetTrigger("turn");
 
         Debug.Log("Turning to " + (turnLeft ? "left" : "right"));
+        if (SFXmanager.Instance != null && SFXmanager.Instance.TurnSound != null)
+        {
+            SFXmanager.Instance.TurnSound.Play();
+        }
 
         // Use turn animation
         // spriteRenderer.flipX = turnLeft;
@@ -96,7 +100,7 @@ public class OtterController : MonoBehaviour
 
         // Finish the turn after the turn animation duration
         // float turnDuration = 0.5f; // Adjust based on the length of turn animation
-       // Invoke("FinishTurn", turnDuration);
+        // Invoke("FinishTurn", turnDuration);
     }
 
     private void FinishTurn()
@@ -113,6 +117,10 @@ public class OtterController : MonoBehaviour
         isSwimmingLeft = swimLeft;
 
         // Update Animator parameters
+        if (SFXmanager.Instance != null && SFXmanager.Instance.MovementSound != null)
+        {
+            SFXmanager.Instance.MovementSound.Play();
+        }
         animator.SetBool("isSwimming", true);
         animator.SetBool("isSwimmingLeft", isSwimmingLeft);
 
