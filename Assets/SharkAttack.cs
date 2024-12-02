@@ -81,7 +81,7 @@ public class SharkAttack : MonoBehaviour
 
         Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
 
-        float chargeDuration = 0.5f;
+        float chargeDuration = 0.2f;
         float elapsedTime = 0f;
 
         while (elapsedTime < chargeDuration)

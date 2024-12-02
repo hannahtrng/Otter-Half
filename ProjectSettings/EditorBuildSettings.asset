@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cave Level 1.unity
     guid: 56fd7926ae89f8f4fb8704fe3fc84dde
+  - enabled: 1
+    path: Assets/Scenes/Game Over (Lose).unity
+    guid: e15b15b6b1d40db41a401e45b875b482
+  - enabled: 1
+    path: Assets/Scenes/Winning.unity
+    guid: 4e5c85a2b310133488da601cc1dba614
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1f1db71d96d85d341bee9885f52355bd
   m_configObjects: {}

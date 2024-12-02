@@ -117,14 +117,14 @@ public class OtterController : MonoBehaviour
         isSwimmingLeft = swimLeft;
 
         // Update Animator parameters
-        if (SFXmanager.Instance != null && SFXmanager.Instance.MovementSound != null)
-        {
-            SFXmanager.Instance.MovementSound.Play();
-        }
         animator.SetBool("isSwimming", true);
         animator.SetBool("isSwimmingLeft", isSwimmingLeft);
 
         Debug.Log("Swimming " + (swimLeft ? "left" : "right"));
+        if (SFXmanager.Instance != null && SFXmanager.Instance.MovementSound != null)
+        {
+            SFXmanager.Instance.MovementSound.Play();
+        }
     }
 
     private void StopSwimming()

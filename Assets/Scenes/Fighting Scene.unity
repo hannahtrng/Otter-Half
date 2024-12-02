@@ -7627,7 +7627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otter: {fileID: 840413569}
-  speed: 0.6
+  speed: 1
 --- !u!61 &1255033329
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8450,6 +8450,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1824185326678582915, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 327135282}
     - target: {fileID: 2924051099876076368, guid: a3b912b4a97f31e4e81c1bc9c5f43532, type: 3}
       propertyPath: m_BodyType
       value: 0
