@@ -25,10 +25,6 @@ public class SettingsManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject); // Make this persist across scenes
         }
-        else
-        {
-            Destroy(gameObject);
-        }
 
         if (SceneManager.GetActiveScene().name == "Cave")
         {
@@ -97,12 +93,7 @@ public class SettingsManager : MonoBehaviour
 
     // Restart the current scene
     private void RestartGame()
-    {
-        otter = GameObject.FindWithTag("Player");
-        if (otter != null)
-        {
-            otter.GetComponent<OtterPositionManager>().ResetPosition();
-        }
+    {   
         SettingsManager.Instance.hasWonFight = false;
         SharkMovement.ResetAllSharkTriggers();
         // Reload the current scene
