@@ -14,20 +14,34 @@ public class SettingsManager : MonoBehaviour
     private const string SharkTriggerKey = "SharkTriggered";
     public GameObject otter;
     public GameObject shark;
+    public static SettingsManager Instance;
+    public bool hasWonFight;
 
     private void Start()
     {
         // Make sure the settings panel is initially inactive
-   
-            if (SceneManager.GetActiveScene().name == "Cave")
-            {
-                    otter = GameObject.FindWithTag("Player");
-                    if (otter != null)
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Make this persist across scenes
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (SceneManager.GetActiveScene().name == "Cave")
+        {
+            otter = GameObject.FindWithTag("Player");
+                if (otter != null)
+                {
+                    if (!SettingsManager.Instance.hasWonFight)
                     {
                         otter.GetComponent<OtterPositionManager>().ResetPosition();
                     }
+            }
          
-            }   
+        }   
 
         settingsPanel.SetActive(false);
         open = false;
@@ -89,6 +103,7 @@ public class SettingsManager : MonoBehaviour
         {
             otter.GetComponent<OtterPositionManager>().ResetPosition();
         }
+        SettingsManager.Instance.hasWonFight = false;
         SharkMovement.ResetAllSharkTriggers();
         // Reload the current scene
         SceneManager.LoadScene("Start Screen");

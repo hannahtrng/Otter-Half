@@ -17,6 +17,11 @@ public class OtterHealth : MonoBehaviour
         otter = GameObject.FindWithTag("Player");
     }
 
+    public void SetSharkFightVictoryFalse()
+    {
+        SettingsManager.Instance.hasWonFight = false;
+    }
+
     public void TakeDamage(int damage)
     {
         health -= damage;
@@ -43,6 +48,7 @@ public class OtterHealth : MonoBehaviour
         {
             SFXmanager.Instance.DeathSound.Play();
         }
+        SetSharkFightVictoryFalse();
         // Stop all movements
         StopAllMovements();
         // Return to the title screen
