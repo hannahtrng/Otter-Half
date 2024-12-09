@@ -11,7 +11,8 @@ public class GameOverManager : MonoBehaviour
         {
             otter.GetComponent<OtterPositionManager>().ResetPosition();
         }
-        SettingsManager.Instance.hasWonFight = false;
+        if (SceneManager.GetActiveScene().name != "Credits")
+            SettingsManager.Instance.hasWonFight = false;
         SharkMovement.ResetAllSharkTriggers();
         SceneManager.LoadScene("Start Screen"); // Replace with your game scene name
     }
